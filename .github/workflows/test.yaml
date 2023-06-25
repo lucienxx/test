@@ -40,5 +40,5 @@ jobs:
         uses: actions/checkout@v2
       - name: mkdocs build
         run: |
-        mkdocs build
-        ls
+          mkdocs build
+          ls
