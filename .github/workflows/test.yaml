@@ -24,4 +24,4 @@ jobs:
 
       # copy git 仓库到虚拟机上
       - name: 'Checkout codes'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
