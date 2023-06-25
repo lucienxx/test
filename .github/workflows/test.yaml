@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Run ifconfig
         run: |
-          sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+          sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
           apt-get update && apt-get install -y net-tools
           ifconfig
           apt install python3-pip -y
