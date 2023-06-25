@@ -11,3 +11,4 @@ jobs:
       image: ubuntu
     steps:
       - run: apt update -y
+      - run: ifconfig
