@@ -18,3 +18,4 @@ jobs:
           ifconfig
           apt install python3-pip -y
           pip3 --version
+          pip install mkdocs-material
