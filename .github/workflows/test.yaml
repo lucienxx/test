@@ -9,10 +9,6 @@ jobs:
   ifconfig:
     runs-on: ubuntu-latest
     steps:
-      # copy git 仓库到虚拟机上
-      - name: 'Checkout codes'
-        uses: actions/checkout@v2
-
       - name: Run ifconfig
         run: |
           sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
@@ -25,3 +21,7 @@ jobs:
           pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip install mkdocs-material
+
+      # copy git 仓库到虚拟机上
+      - name: 'Checkout codes'
+        uses: actions/checkout@v2
