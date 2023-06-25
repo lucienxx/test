@@ -1,0 +1,70 @@
+site_name: 我的博客
+repo_url: http://192.168.1.200:3000/lucienx/mynote
+repo_name: lucienx/mynote
+edit_uri: _edit/master/docs/
+theme:
+  name: material
+  language: zh
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - php
+    - python
+    - javascript
+    - java
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.action.edit
+    - navigation.path
+    - navigation.prune
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      #permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - tags
+  - git-authors
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - link-preview
+#扩展样式
+extra_css:
+  - resources/css/extra.css
+  - path/to/link-preview.css
