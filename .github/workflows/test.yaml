@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: apt update -y
       - run: ifconfig
