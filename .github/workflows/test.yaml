@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  Make env:
+  todo:
     runs-on: ubuntu-latest
     container: ubuntu
     steps:
