@@ -9,19 +9,22 @@ jobs:
   ifconfig:
     runs-on: ubuntu-latest
     steps:
-      - name: Run ifconfig
+      - name: 修改源
         run: |
           sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-          apt-get update && apt-get install -y net-tools
-          ifconfig
+      - name: 更新源
+        run: |
+          apt-get update
+      - name: 安装pip
+        run: |
           apt install python3-pip -y
           pip3 --version
+      - name: 修改pip源
+        run: |
           pip3 install NumPy -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
+      - name: 安装mkdocs依赖
+        run: |
           pip install mkdocs-material
-
-      # copy git 仓库到虚拟机上
-      - name: 'Checkout codes'
-        uses: actions/checkout@v3
