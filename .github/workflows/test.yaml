@@ -6,14 +6,12 @@ on:
       - main
 
 jobs:
-  ifconfig:
+  Make env:
     runs-on: ubuntu-latest
     steps:
       - name: 修改源
         run: |
           sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-      - name: 更新源
-        run: |
           apt-get update
       - name: 安装pip
         run: |
