@@ -7,8 +7,6 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu
     steps:
       - run: apt update -y
       - run: ifconfig
