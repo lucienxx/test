@@ -10,29 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu
     steps:
-      - name: 修改源
-        run: |
-          sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+#      - name: 修改源
+#        run: |
+#          sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
       - name: 更新源
         run: |
           apt-get update
       - name: 安装node.js和npm
         run: |
           apt install nodejs npm -y
-          npm config set registry https://registry.npm.taobao.org
+#          npm config set registry https://registry.npm.taobao.org
           nodejs --version
       - name: 安装pip
         run: |
           apt install python3-pip -y
           pip3 --version
-      - name: 修改pip源
-        run: |
-          python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
-          pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-          pip3 install NumPy -i https://pypi.tuna.tsinghua.edu.cn/simple
-          pip3 install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple
-          pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
-          pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
+#      - name: 修改pip源
+#        run: |
+#          python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+#          pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+#          pip3 install NumPy -i https://pypi.tuna.tsinghua.edu.cn/simple
+#          pip3 install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple
+#          pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+#          pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
       - name: 安装mkdocs依赖
         run: |
           pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-material-extensions mkdocs-minify-plugin mkdocs-markdownextradata-plugin https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
