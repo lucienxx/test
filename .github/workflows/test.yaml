@@ -38,3 +38,7 @@ jobs:
           pip install mkdocs-material
       - name: Checkout code to workspace
         uses: actions/checkout@v2
+      - name: mkdocs build
+        uses: |
+        mkdocs build
+        ls
