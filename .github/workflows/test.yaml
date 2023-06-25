@@ -17,4 +17,4 @@ jobs:
           apt-get update && apt-get install -y net-tools
           ifconfig
           apt install python3-pip -y
-          pip3 -V
+          pip3 --version
