@@ -29,6 +29,5 @@ jobs:
       - name: 安装mkdocs依赖
         run: |
           pip install mkdocs-material
-    steps:
       - name: Checkout code to workspace
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
