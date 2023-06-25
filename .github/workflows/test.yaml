@@ -22,6 +22,8 @@ jobs:
           pip3 --version
       - name: 修改pip源
         run: |
+          python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+          python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
           pip3 install NumPy -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
