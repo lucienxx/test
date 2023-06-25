@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
 jobs:
-  测试:
+  test:
     runs-on: self-hosted
     steps:
       - run: apt update -y
