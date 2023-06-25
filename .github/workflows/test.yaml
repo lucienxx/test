@@ -19,6 +19,7 @@ jobs:
       - name: 安装nodejs和npm
         run: |
           apt install nodejs npm -y
+          nodejs --version
       - name: 安装pip
         run: |
           apt install python3-pip -y
@@ -33,7 +34,7 @@ jobs:
       #          pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
       - name: 安装mkdocs依赖
         run: |
-          pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-material-extensions mkdocs-minify-plugin mkdocs-markdownextradata-plugin https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+          pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-material-extensions mkdocs-minify-plugin mkdocs-markdownextradata-plugin mkdocs-git-authors-plugin https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
       - name: Checkout code to workspace
         uses: actions/checkout@v2
       - name: mkdocs build
