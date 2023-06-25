@@ -8,8 +8,6 @@ on:
 jobs:
   ifconfig:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu
     steps:
       - name: Run ifconfig
         run: |
