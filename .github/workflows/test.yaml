@@ -18,4 +18,8 @@ jobs:
           ifconfig
           apt install python3-pip -y
           pip3 --version
+          pip3 install NumPy -i https://pypi.tuna.tsinghua.edu.cn/simple
+          pip3 install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple
+          pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+          pip3 install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
           pip install mkdocs-material
