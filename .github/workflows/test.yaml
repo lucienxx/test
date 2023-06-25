@@ -3,5 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu
     steps:
       - run: apt update -y
