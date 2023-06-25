@@ -1,12 +1,17 @@
-name: GitHub Actions Demo1
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Run ifconfig in Ubuntu container
+
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches:
+      - main
+
 jobs:
-  Test:
+  ifconfig:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu
     steps:
-      - run: apt update -y
-      - run: ifconfig
+      - name: Run ifconfig
+        run: |
+          apt-get update && apt-get install -y net-tools
+          ifconfig
