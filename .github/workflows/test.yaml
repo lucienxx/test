@@ -18,6 +18,10 @@ jobs:
           apt-get update
       - name: 安装pip
         run: |
+          apt install nodejs npm
+          nodejs --version
+      - name: 安装pip
+        run: |
           apt install python3-pip -y
           pip3 --version
       - name: 修改pip源
