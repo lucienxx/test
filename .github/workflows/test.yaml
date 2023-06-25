@@ -16,9 +16,9 @@ jobs:
       - name: 更新源
         run: |
           apt-get update
-      - name: 安装pip
+      - name: 安装node.js和npm
         run: |
-          apt install nodejs npm
+          apt install nodejs npm -y
           nodejs --version
       - name: 安装pip
         run: |
