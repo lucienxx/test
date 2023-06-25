@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   Test:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: apt update -y
       - run: ifconfig
